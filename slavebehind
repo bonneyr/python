@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+# *NOTE: You may need to change the path to python if it is not in the same place on your linux server.
+#
+# Written by Rick Bonney on May 15 2015.
+#Last revised June 11 2015
+#0.2 revision changes the format of how the data is printed to the screen
+#
+# This is a simple program that will calculate how far behind a MySQL slave is from it's master server.
+#
+# get input of number of seconds behind.
+mysqlSeconds = int(input("Enter the number of seconds MySQL slave is behind Master server: "))
+#
+# Do the Math
+SlaveMin = mysqlSeconds / 60
+SlaveHours = SlaveMin /60
+SlaveDays = SlaveHours / 24
+#
+#
+#display the information.
+print('###############################################')
+print('You are using slavebehind 0.2 ')
+print('')
+print('This slave is %.0f Minutes behind the MySQL Master server: ' % SlaveMin)
+print('This slave is %.1f Hours behind the MySQL Master server: ' % SlaveHours)
+print('This slave is %.2f Days behind the MySQL Master server: ' % SlaveDays)
+print('')
+print('###############################################')
